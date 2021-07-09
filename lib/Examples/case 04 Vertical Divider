@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Material App',
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('Material App Bar'),
+            ),
+            body: Center(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                RaisedButton(
+                  onPressed: () {
+                    print('Pickup button pressed.');
+                  },
+                  child: Text(
+                    'Pickup',
+                  ),
+                ),
+                // This widget is not shown on screen initially.
+                VerticalDivider(),
+                                 
+                //     VerticalDivider(
+                //   width: 20.0,
+                //   thickness: 5.0,
+                // ),
+                RaisedButton(
+                  onPressed: () {
+                    print('Delivery button pressed.');
+                  },
+                  child: Text(
+                    'Delivery',
+                  ),
+                )
+              ],
+            ))));
+  }
+}

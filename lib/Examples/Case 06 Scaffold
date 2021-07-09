@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+          // Use This Property
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          title: Text('Case03'),
+        ),
+        body: Center(
+          child: 
+          // To Show Full List Use SinglechildScrollView
+          Column(
+            children: [
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+              TextField(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

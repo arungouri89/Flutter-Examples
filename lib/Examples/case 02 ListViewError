@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              FlutterLogo(
+                size: 500,
+              ),
+              Flexible(
+                child: ListView(
+                  // in case of list view
+                  // shrinkWrap: true,
+                  children: <Widget>[
+                    ListTile(
+                      leading: Icon(Icons.map),
+                      title: Text('Map1'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.subway),
+                      title: Text('Subway'),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

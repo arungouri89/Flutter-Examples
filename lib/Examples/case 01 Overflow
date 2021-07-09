@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+
+class RowandColunm extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Material App Bar'),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            //Case 1
+            // Use Expanded Widget
+            FlutterLogo(
+              size: 800,
+              style: FlutterLogoStyle.markOnly,
+            ),
+
+            Text('Hello World')
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+-------------Soluution 02--use SingleChildScrollView----
+Center(
+        child: SingleChildScrollView(
+          child: Column(
+            //crossAxisAlignment: CrossAxisAlignment.,
+            children: [
+              //Case 1
+              // Use Expanded Widget
+              FlutterLogo(
+                size: 800,
+                style: FlutterLogoStyle.markOnly,
+              ),
+
+              Text('Hello World')
+            ],
+          ),
+        ),
+      ),
